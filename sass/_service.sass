@@ -1,0 +1,31 @@
+.service
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &.service--reversed
+        flex-direction: row-reverse
+    &__inner
+        width: 50%
+        &.service__inner--padding-left
+            padding-left: 80px
+    &__gif
+        display: block
+        width: 100%
+        &.service__gif--smaller
+            width: 90%
+
+@media (max-width: 764px)
+    .service
+        flex-wrap: wrap
+        &__inner
+            width: 100%
+            &.service__inner--padding-left
+                padding-left: 0
+        &__inner:first-child
+            order: 2
+        &__inner:last-child
+            order: 1
+        &__gif
+            margin-bottom: 50px
+            &.service__gif--smaller
+                width: 100%

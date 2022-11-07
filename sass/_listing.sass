@@ -1,0 +1,59 @@
+.listing
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 80px
+    &__item
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        width: 25%
+    &__texts
+        text-align: center
+    &__item-gif
+        display: block
+        width: 70%
+    &__item-name
+        display: block
+        margin: 30px auto 0 auto
+        transform: scale(0.75)
+    &__item-text
+        font-family: "Univers LT W05_55 Roman"
+        font-size: 20px
+
+@media (max-width: 1024px)
+    .listing
+        flex-wrap: wrap
+        &__item
+            width: 50%
+        &__item:nth-child(1), &__item:nth-child(2)
+            margin-bottom: 60px
+
+@media (max-width: 600px)
+    .listing
+        margin-top: 50px
+        &__item
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            align-items: center
+            width: 100%
+            padding: 20px 0
+            border-bottom: 1px solid #B7B4B4
+        &__item-gif
+            width: 25%
+        &__item:nth-child(1), &__item:nth-child(2)
+            margin-bottom: 0px
+        &__texts
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+            margin-left: 30px
+        &__item-name
+            transform: scale(0.6)
+            transform-origin: left center
+            margin: 0
+        &__item-text
+            font-size: 18px
